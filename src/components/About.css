@@ -1,0 +1,78 @@
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.about__intro h2 {
+  max-width: 500px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.12;
+}
+
+.about__intro > p:not(.section-eyebrow) {
+  margin-top: 22px;
+  color: var(--color-muted);
+}
+
+.about__tool {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 0;
+  margin-top: 10px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about__tool span {
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+.about__tool strong {
+  font-size: 1.25rem;
+}
+
+.about__skills h3 {
+  margin: 24px 0 14px;
+}
+
+.about__skills ul {
+  list-style: none;
+}
+
+.about__skills li {
+  padding: 11px 0;
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about__skills li::before {
+  content: "↗";
+  color: var(--color-accent);
+  margin-right: 12px;
+}
+
+
+.about__portrait {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 25%;
+  margin-bottom: 30px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+
+@media (max-width: 750px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+}

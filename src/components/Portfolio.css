@@ -1,0 +1,100 @@
+
+/* ========================================
+   APIOD VISUALS — PORTFOLIO
+======================================== */
+
+.portfolio {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section heading */
+
+.portfolio__heading {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.portfolio__heading .section-eyebrow {
+  color: var(--color-accent);
+}
+
+.portfolio__heading h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.portfolio__heading > p:last-child {
+  margin-top: 16px;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Project grid */
+
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 28px;
+  row-gap: 10px;
+}
+
+/* Ensure Reveal wrappers fit the grid correctly */
+
+.portfolio__grid > * {
+  min-width: 0;
+}
+
+/* Confidentiality note */
+
+.portfolio__note {
+  max-width: 750px;
+  margin-top: 24px;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+  .portfolio__grid {
+    column-gap: 22px;
+  }
+}
+
+@media (max-width: 650px) {
+  .portfolio__heading {
+    margin-bottom: 28px;
+  }
+
+  .portfolio__heading h2 {
+    letter-spacing: -0.8px;
+  }
+
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .portfolio__note {
+    font-size: 0.76rem;
+  }
+}
+
+/* ========================================
+   REDUCED-MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio__grid > * {
+    transition: none;
+  }
+}
